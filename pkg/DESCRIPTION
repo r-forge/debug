@@ -1,0 +1,11 @@
+Package: debug
+Maintainer: Peter Danenberg <pcd@roxygen.org>
+License: MIT
+Title: printf-style debugging
+Description: Is there any other way to debug than printf-style?
+Type: Package
+LazyLoad: yes
+Author: Peter Danenberg <pcd@roxygen.org>
+Version: 0.1
+Date: 2011-06-21
+Collate: 'debug.R'

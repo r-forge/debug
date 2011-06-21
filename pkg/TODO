@@ -1,0 +1,16 @@
+# -*- org -*-
+* TODO debug
+  From [[https://r-forge.r-project.org/projects/rjavax/][rJavax]]:
+
+  #+BEGIN_SRC R :tangle debug-in-R.R :shebang #!/usr/local/bin/R --vanilla --slave -f 
+    ## Thanks, William Dunlap!
+    ## <https://stat.ethz.ch/pipermail/r-devel/2011-May/061098.html>
+    debug <- function(...) {
+      promises <- as.list(substitute(list(...)))[-1]
+      str(structure(Map(eval, promises),
+                    names=Map(deparse, promises)))
+    }
+    
+    a <- 2
+    debug(a, a + a, (function() a + a)())
+  #+END_SRC
